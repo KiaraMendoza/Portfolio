@@ -11,14 +11,14 @@ import Projects from "./components/Projects.component";
 function App() {
   return (
     <Router>
+      <HeaderComponent />
       <div className="container">
-        <HeaderComponent />
         <br />
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
-        <Footer />
       </div>
+      <Footer />
     </Router>
   );
 }
