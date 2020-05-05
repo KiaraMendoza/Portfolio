@@ -35,8 +35,10 @@ export default class Home extends React.Component {
       //text.classList.add(colors[words.indexOf(word)]);
       let id = setInterval(() => {
         if (i >= word.length) {
-          deleteChar();
-          clearInterval(id);
+          setTimeout(() => {
+            deleteChar();
+            clearInterval(id);
+          }, 100);
         } else {
           text.innerHTML += word[i];
           i++;
@@ -57,7 +59,7 @@ export default class Home extends React.Component {
           printChar(TEXTS[gen.next().value]);
           clearInterval(id);
         }
-      }, 200);
+      }, 70);
     }
 
     let gen = generator();
@@ -75,7 +77,7 @@ export default class Home extends React.Component {
           <div>
             <h1 className="home-header">Hello! I'm Kiara</h1>
             <h4 id="writing-text" className="d-inline-block"></h4>
-            <span className="ml-1 animated flash writing-span">|</span>
+            <span className="writing-span ml-1 animated flash infinite">|</span>
           </div>
         </div>
       </main>

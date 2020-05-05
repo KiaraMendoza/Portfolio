@@ -1,5 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import $ from "jquery";
+
+$(document).ready(function () {
+  $("#click").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $("#div1").offset().top,
+      },
+      2000
+    );
+  });
+});
+
 
 export default class Navbar extends React.Component {
   //state = { activeItem: "home" };
@@ -9,21 +22,22 @@ export default class Navbar extends React.Component {
   render() {
 
     return (
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <Link to="/" className="nav-link">Home <span className="sr-only">(current)</span></Link>
+      <div className="navbar-container position-fixed w-100">
+      <nav className="navbar navbar-expand navbar-dark">
+        <div className="collapse navbar-collapse justify-content-end">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a href="#about" className="nav-link">About</a>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">About</Link>
+              <a href="#projects" className="nav-link">Projects</a>
             </li>
             <li className="nav-item">
-              <Link to="/projects" className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Projects</Link>
+              <a href="#contact" className="nav-link">Contact</a>
             </li>
           </ul>
         </div>
-      </nav>
+      </nav></div>
     );
   }
 }
