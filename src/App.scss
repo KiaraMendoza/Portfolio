@@ -1,3 +1,28 @@
-.App {
-  text-align: center;
+.home {
+  height: 80vh;
+  max-height: 800px;
+  background-color: #1b1c1d;
+  color: #FFF;
+  .writing-span {
+    animation: blink 0.75s infinite;
+  }
+}
+.nav {
+  a {
+    color: rgba(255,255,255,.7);
+  }
+  a.active {
+    color: #FFF;
+  }
+}
+.about {
+  height: 80vh;
+  max-height: 800px;
+}
+.projects {
+  height: 80vh;
+  max-height: 800px;
+}
+.footer {
+  height: 200px;
 }
