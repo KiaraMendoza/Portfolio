@@ -35,10 +35,8 @@ export default class Home extends React.Component {
       //text.classList.add(colors[words.indexOf(word)]);
       let id = setInterval(() => {
         if (i >= word.length) {
-          setTimeout(() => {
-            deleteChar();
-            clearInterval(id);
-          }, 100);
+          deleteChar();
+          clearInterval(id);
         } else {
           text.innerHTML += word[i];
           i++;

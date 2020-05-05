@@ -34,6 +34,10 @@
   height: 80vh;
   max-height: 800px;
   background-color: #f7f7f7;
+  i {
+    font-size: 35px;
+    color: #343a40;
+  }
 }
 .about-image {
   max-width: 60%;
@@ -41,12 +45,60 @@
   display: block;
 }
 .projects {
-  height: 100vh;
-  max-height: 800px;
+  min-height: 100vh;
   background: #FFF;
+  .card-img-top {
+    height: 300px;
+    max-height: 100%;
+  }
 }
 .footer {
-  height: 40vh;
+  min-height: 40vh;
   background-color: #343a40;
   color: rgba(255,255,255,.7);
+}
+
+.contact-form {
+  width: 30%;
+  .btn-primary {
+    background-color: #343a40;
+    transition: linear 0.2s;
+  }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #ED9121 !important;
+  }
+  .btn-primary, .btn-primary:hover {
+    color: #FFF;
+    font-weight: bold;
+    border: 2px solid #ED9121;
+  }
+  .form-check-input {
+    -webkit-appearance: none;
+    font-size: 20px;
+    &:before {
+      content: "\f004";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 400;
+      color: red;
+    }
+    &:checked:before {
+      content: "\f004";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: red;
+    }
+  }
+  .contact-title {
+    border-bottom: 5px solid #ED9121;
+  }
+}
+
+@media(max-width: 640px) {
+  
+  .contact-icons-row {
+    justify-content: center;
+  }
+  .contact-form {
+    width: 60%;
+  }
 }

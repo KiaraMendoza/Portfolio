@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import $ from "jquery";
 
 $(document).ready(function () {
-  $("#click").click(function () {
+  $(".nav-link").click(function () {
+    let hrefContent = $(this).text().toLowerCase();
     $("html, body").animate(
       {
-        scrollTop: $("#div1").offset().top,
+        scrollTop: $(`#${hrefContent}`).offset().top,
       },
-      2000
+      400
     );
   });
 });
@@ -23,21 +24,28 @@ export default class Navbar extends React.Component {
 
     return (
       <div className="navbar-container position-fixed w-100">
-      <nav className="navbar navbar-expand navbar-dark">
-        <div className="collapse navbar-collapse justify-content-end">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a href="#about" className="nav-link">About</a>
-            </li>
-            <li className="nav-item">
-              <a href="#projects" className="nav-link">Projects</a>
-            </li>
-            <li className="nav-item">
-              <a href="#contact" className="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav></div>
+        <nav className="navbar navbar-expand navbar-dark">
+          <div className="collapse navbar-collapse justify-content-end">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a href="#about" className="nav-link">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#projects" className="nav-link">
+                  Projects
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#contact" className="nav-link">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     );
   }
 }
