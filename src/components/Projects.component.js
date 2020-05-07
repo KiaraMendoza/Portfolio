@@ -1,54 +1,20 @@
 import React from "react";
 import About from "./About.component";
-
+import myProjects from "../myProjects";
 
 const ProjectsCards = props => (
-  <div class="col mb-4">
-    <div class="card">
-      <img src={props.project.projectImg} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">{props.project.name}</h5>
-        <p class="card-text">{props.project.description}</p>
+  <div className="col mb-4">
+    <div className="card">
+      <img src={props.project.projectImg} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <h5 className="card-title">{props.project.name}</h5>
+        <p className="card-text">{props.project.description}</p>
+        <a href={props.project.projectUrl} className="btn btn-secondary">See more</a>
       </div>
     </div>
   </div>
 );
 
-const myProjects = [
-  {
-    name: "Project1",
-    description: "Lorem Lorem de mi vida",
-    projectImg: "/img/projects/random-quotes-project.jpg",
-  },
-  {
-    name: "Project2",
-    description: "Lorem Lorem de mi vida",
-    projectImg: "https://via.placeholder.com/350x320",
-  },
-  {
-    name: "Project3",
-    description: "Lorem Lorem de mi vida",
-    projectImg: "https://via.placeholder.com/350x320",
-  },
-];
-
-const myProjects2 = [
-  {
-    name: "Project4",
-    description: "Lorem Lorem de mi vida",
-    projectImg: "/img/projects/random-quotes-project.jpg",
-  },
-  {
-    name: "Project5",
-    description: "Lorem Lorem de mi vida",
-    projectImg: "https://via.placeholder.com/350x320",
-  },
-  {
-    name: "Project6",
-    description: "Lorem Lorem de mi vida",
-    projectImg: "https://via.placeholder.com/350x320",
-  },
-];
 
 export default class Projects extends React.Component {
   constructor(){
@@ -56,32 +22,39 @@ export default class Projects extends React.Component {
 
     this.state = {
       projects: [...myProjects],
+      maxProjectsToShow: 6,
     };
 
+    this.ProjectsList = this.ProjectsList.bind(this);
     this.ProjectsShowMore = this.ProjectsShowMore.bind(this);
   }
 
   
 
   ProjectsList(){
+    /*for (let currentProject = 0; currentProject < maxProjectsToShow; currentProject++) {
+      console.log(currentProject);
+      return <ProjectsCards project={this.state.projects[currentProject]} />
+    }*/
+
     return this.state.projects.map(currentProject => {
-      return <ProjectsCards project={currentProject} />
+      if (this.state.projects.indexOf(currentProject) < this.state.maxProjectsToShow) {
+        return <ProjectsCards project={currentProject} />
+      }
+      
     });
   }
 
   ProjectsShowMore(){
-    this.setState({projects: [this.state.projects, ...myProjects2]});
-    return this.state.projects.map((currentProject) => {
-      return <ProjectsCards project={currentProject} />;
-    });
+    this.setState({ maxProjectsToShow: this.state.maxProjectsToShow + 3});
   }
 
   render() {
     return (
       <main id="projects" className="projects py-5">
         <h2 className="text-center py-4">Projects</h2>
-        <div class="row row-cols-1 row-cols-md-3 container mx-auto">{this.ProjectsList()}</div>
-        <div className="pt-4 text-center"><button onClick={this.ProjectsShowMore} class="btn btn-secondary">Show more</button></div>
+        <div className="row row-cols-1 row-cols-md-3 container mx-auto">{this.ProjectsList()}</div>
+        <div className="pt-4 text-center"><button onClick={this.ProjectsShowMore} className="btn btn-secondary">Show more</button></div>
       </main>
     );
   }

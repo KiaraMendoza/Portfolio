@@ -4,7 +4,7 @@ export default class Footer extends React.Component {
   render() {
     return (
       <footer id="contact" className="footer pt-4">
-        <div className="container d-flex justify-content-center">
+        <div className="container d-flex justify-content-center pb-5">
           <form className="contact-form">
           <h2 className="contact-title pb-3 mb-4 text-center">Contact me!</h2>
             <div className="form-group">
@@ -21,6 +21,9 @@ export default class Footer extends React.Component {
             </div>
             <button type="submit" className="btn btn-primary"> Let's meet! </button>
           </form>
+        </div>
+        <div className="copyright text-center pt-2 pb-1">
+          <p>Made with love by Kiara @2020</p>
         </div>
       </footer>
     );

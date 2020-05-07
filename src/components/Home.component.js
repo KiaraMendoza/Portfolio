@@ -1,6 +1,6 @@
 import React from "react";
 
-const TEXTS = ['A junior web developer', 'A tech lover', 'Animal lover'];
+const TEXTS = ['A junior web developer', 'A tech lover', 'An Animal lover'];
 
 
 export default class Home extends React.Component {
