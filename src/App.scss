@@ -1,3 +1,4 @@
+// General styles
 .app {
   .h1, h1 {
     font-size: 4rem;
@@ -5,8 +6,32 @@
   .h3, h3 {
     font-size: 2.5rem;
   }
+  .btn-primary {
+    background-color: transparent !important;
+    transition: linear 0.2s;
+  }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #ED9121 !important;
+  }
+  .btn-primary, .btn-primary:hover {
+    color: #FFF;
+    font-weight: bold;
+    border: 2px solid #ED9121 !important;
+  }
 }
 
+//Animations 
+.bounce-animation {
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+  0% {margin-top: 0px;}
+  50% {margin-top: -10px;}
+  100% {margin-top: 0px;}
+}
+
+//Home styles
 .home {
   height: 80vh;
   max-height: 800px;
@@ -17,6 +42,8 @@
     animation-duration: 1.5;
   }
 }
+
+//Navbar styles
 .navbar-container {
   z-index: 2;
 }
@@ -30,6 +57,7 @@
     color: #FFF;
   }
 }
+//About styles
 .about {
   height: 80vh;
   max-height: 800px;
@@ -44,34 +72,51 @@
   margin: 0 auto;
   display: block;
 }
+//Projects styles
 .projects {
   min-height: 100vh;
   background: #FFF;
+  .card {
+    height: 100%;
+  }
   .card-img-top {
     height: 300px;
     max-height: 100%;
   }
 }
+//Single project styles
+.project-detail {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  .tech-icons i {
+    font-size: 35px;
+    color: #343a40;
+  }
+  .project-photo img{
+    max-width: 100%;
+    border: 10px solid #FFF;
+  }
+  .left-icon, .right-icon {
+    font-size: 40px;
+    cursor: pointer;
+    top: 50%;
+  }
+  .left-icon {
+    left: -50px;
+  }
+  .right-icon {
+    right: -50px;
+  }
+}
+
+//Footer styles
 .footer {
-  min-height: 40vh;
   background-color: #343a40;
   color: rgba(255,255,255,.7);
 }
-
+//Contact styles
 .contact-form {
   width: 30%;
-  .btn-primary {
-    background-color: #343a40;
-    transition: linear 0.2s;
-  }
-  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-    background-color: #ED9121 !important;
-  }
-  .btn-primary, .btn-primary:hover {
-    color: #FFF;
-    font-weight: bold;
-    border: 2px solid #ED9121;
-  }
   .form-check-input {
     -webkit-appearance: none;
     font-size: 20px;
@@ -92,11 +137,15 @@
     border-bottom: 5px solid #ED9121;
   }
 }
+//Copyright styles
 .copyright {
   background-color: #101114;
 }
 
 
+
+
+//Mobile media
 @media(max-width: 640px) {
   
   .contact-icons-row {
@@ -104,5 +153,13 @@
   }
   .contact-form {
     width: 60%;
+  }
+  .project-detail {
+    .left-icon {
+      left: 0;
+    }
+    .right-icon {
+      right: 0;
+    }
   }
 }

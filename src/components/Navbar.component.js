@@ -1,18 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import $ from "jquery";
 
-$(document).ready(function () {
-  $(".nav-link").click(function () {
-    let hrefContent = $(this).text().toLowerCase();
-    $("html, body").animate(
-      {
-        scrollTop: $(`#${hrefContent}`).offset().top,
-      },
-      400
-    );
-  });
-});
+
+
 
 
 export default class Navbar extends React.Component {
@@ -20,6 +11,19 @@ export default class Navbar extends React.Component {
 
   //handleItemClick = (e, { text }) => this.setState({ activeItem: text });
 
+  componentDidMount() {
+    $(".nav-link").click(function () {
+      let hrefContent = $(this).text().toLowerCase();
+      $("html, body").animate(
+        {
+          scrollTop: $(`#${hrefContent}`).offset().top,
+        },
+        400
+      );
+    });
+  }
+
+  
   render() {
 
     return (
@@ -27,20 +31,17 @@ export default class Navbar extends React.Component {
         <nav className="navbar navbar-expand navbar-dark">
           <div className="collapse navbar-collapse justify-content-end">
             <ul className="navbar-nav">
-              <li className="nav-item">
-                <a href="#about" className="nav-link">
-                  About
-                </a>
+              <li className="nav-item" key="home">
+                <a href="/#home" className="nav-link">Home</a>
               </li>
-              <li className="nav-item">
-                <a href="#projects" className="nav-link">
-                  Projects
-                </a>
+              <li className="nav-item" key="about">
+                <a href="/#about" className="nav-link">About</a>
               </li>
-              <li className="nav-item">
-                <a href="#contact" className="nav-link">
-                  Contact
-                </a>
+              <li className="nav-item" key="projects">
+                <a href="/#projects" className="nav-link">Projects</a>
+              </li>
+              <li className="nav-item" key="contact">
+                <a href="/#contact" className="nav-link">Contact</a>
               </li>
             </ul>
           </div>

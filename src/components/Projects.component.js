@@ -9,7 +9,7 @@ const ProjectsCards = props => (
       <div className="card-body">
         <h5 className="card-title">{props.project.name}</h5>
         <p className="card-text">{props.project.description}</p>
-        <a href={props.project.projectUrl} className="btn btn-secondary">See more</a>
+        <a href={`/projects/${props.project.slug}`} className="btn btn-secondary">See more</a>
       </div>
     </div>
   </div>
@@ -32,11 +32,6 @@ export default class Projects extends React.Component {
   
 
   ProjectsList(){
-    /*for (let currentProject = 0; currentProject < maxProjectsToShow; currentProject++) {
-      console.log(currentProject);
-      return <ProjectsCards project={this.state.projects[currentProject]} />
-    }*/
-
     return this.state.projects.map(currentProject => {
       if (this.state.projects.indexOf(currentProject) < this.state.maxProjectsToShow) {
         return <ProjectsCards project={currentProject} />
@@ -52,8 +47,16 @@ export default class Projects extends React.Component {
   render() {
     return (
       <main id="projects" className="projects py-5">
-        <h2 className="text-center py-4">Projects</h2>
-        <div className="row row-cols-1 row-cols-md-3 container mx-auto">{this.ProjectsList()}</div>
+        {/*<div className="current-project">
+          <h2>Current Project</h2>
+          <div className="row mx-0">
+            <div className="col-12 col-md-6">
+
+            </div>
+          </div>
+        </div>*/}
+        <h2 className="text-center py-4">Latest projects</h2>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 container mx-auto">{this.ProjectsList()}</div>
         <div className="pt-4 text-center"><button onClick={this.ProjectsShowMore} className="btn btn-secondary">Show more</button></div>
       </main>
     );
