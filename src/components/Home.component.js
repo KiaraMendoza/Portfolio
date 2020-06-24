@@ -42,7 +42,6 @@ export default class Home extends React.Component {
         setTimeout(() => {
           this.WriteText();
         }, 200);
-        console.log('vuelve al inicio!')
       } else {
         setTimeout(() => {
           this.WriteText();
@@ -54,7 +53,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <main role="main" className="home" id="home">
-        <div className="d-flex justify-content-center flex-column text-center h-100">
+        <div className="polygon d-flex justify-content-center flex-column text-center h-100">
           <div>
             <h1 className="home-header">Hello! I'm Kiara</h1>
             <h4 id="writing-text" className="d-inline-block"></h4>

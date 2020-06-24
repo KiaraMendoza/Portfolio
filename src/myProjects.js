@@ -1,5 +1,14 @@
 const myProjects = [
     {
+        name: "Exercise Tracker",
+        description: "An very basic exercise tracker app made using the 'MERN' stack.",
+        info: "An very basic exercise tracker app made using the 'MERN' (MongoDB, Express, ReactJS and NodeJS) stack. Just for learning and fun :).",
+        techUsed: ['fas fa-database','fab fa-react', 'fab fa-node', 'fab fa-js', 'fab fa-html5', 'fab fa-sass', 'fab fa-bootstrap'],
+        projectImg: "/img/projects/exercise-tracker.png",
+        projectGif: "/screencasts/projects/exercise-tracker.gif",
+        slug: "exercise-tracker",
+    },
+    {
         name: "Random Quotes",
         description: "A random quote generator with Final Fantasy quotes.",
         info: "A random quote generator with Final Fantasy quotes. Made for FreeCodeCamp 'Front-End Libraries Certification'. It's function is simple, you can press a button called 'Change Quote' to get a new quote, or you can 'tweet it' with the 'twitter' button.",
@@ -28,8 +37,8 @@ const myProjects = [
     },
     {
         name: "Technical Documentation",
-        description: "A single page with sidebar about JS",
-        info: "A single page with sidebar about JS",
+        description: "A single page of JS documentation with sidebar",
+        info: "A single page of JS documentation with sidebar",
         techUsed: ['fab fa-html5', 'fab fa-css3-alt'],
         projectImg: "/img/projects/technical-documentation.png",
         slug: "technical-documentation",
@@ -55,12 +64,12 @@ const myProjects = [
     },
     {
         name: "My first Project",
-        description: "A short project about my handsome boyfriend who teached.",
+        description: "A short project about my boyfriend who teached me about web development.",
         info: "A short project about my handsome boyfriend who teached me about web development. Maybe that's why I really love web development?",
         techUsed: ['fab fa-html5', 'fab fa-css3-alt'],
         projectImg: "/img/projects/first-project.png",
         slug: "first-project",
-        externalUrl: "./Pag2/hey.html",
+        externalUrl: "/Pag2/hey.html",
     },
 ];
 

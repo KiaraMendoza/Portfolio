@@ -13,7 +13,7 @@ export default class Navbar extends React.Component {
 
   componentDidMount() {
     $(".nav-link").click(function () {
-      let hrefContent = $(this).text().toLowerCase();
+      let hrefContent = $(this).text().toLowerCase();; //$(this).text().toLowerCase();
       $("html, body").animate(
         {
           scrollTop: $(`#${hrefContent}`).offset().top,

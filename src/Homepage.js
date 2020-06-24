@@ -14,6 +14,8 @@ function HomePage() {
       <About />
       <Projects />
       <Footer />
+      <div id="sm-indicator" className="d-block d-md-none sm-visible" />
+      <div id="lg-indicator" className="d-none d-md-block lg-visible" />
     </div>
   )
 }
