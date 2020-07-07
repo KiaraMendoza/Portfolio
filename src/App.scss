@@ -102,12 +102,19 @@
   border-top: 2px solid #1b1c1d;
   border-bottom: 2px solid #1b1c1d;
   background-color: #1b1c1d;
-  color: #fff;
+  color: #FFF;
   img {
     max-width: 100%;
   }
   .tech-icons i{
     font-size: 35px;
+  }
+  a {
+    color: #e83e8c;
+    &:hover, &:focus {
+      text-decoration: none;
+      color: #FFF;
+    }
   }
 }
 
@@ -123,6 +130,7 @@
   }
   .card-img-top {
     height: 300px;
+    object-fit: cover;
     max-height: 100%;
   }
   .card {
@@ -131,6 +139,12 @@
   .card:hover {
     margin-top: -20px;
     transition: linear 0.3s;
+  }
+  .tech-icons {
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: .5rem 0 2rem;
+    font-size: 1.4rem;
   }
 }
 .latest-projects {

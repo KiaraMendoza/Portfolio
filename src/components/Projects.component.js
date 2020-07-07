@@ -17,6 +17,12 @@ const ProjectsCards = props =>
         <div className="card-body">
           <h5 className="card-title">{props.project.name}</h5>
           <p className="card-text">{props.project.description}</p>
+          <p>Tech used:</p>
+          <div className="tech-icons d-flex justify-content-center">
+            {props.project.techUsed.map(tech => {
+              return <i className={`${tech} px-1`}></i>
+            })}
+          </div>
           <a href={`/projects/${props.project.slug}`} className="btn btn-secondary">See more</a>
         </div>
       </div>
@@ -118,8 +124,8 @@ export default class Projects extends React.Component {
                     <code>Still in progress!!</code><br/>
                     TakeCare is a web social application where you can express your emotions about your animal-family-members as you could do on a <i>'normal'</i> social media but more focused on animals.<br/>
                     Let's talk about your loved pets! Do you have any question about any strange behavior on your best friend? Maybe someone in the community can help you, filter using your pet race and ask! <br/>
-
                   </p>
+                  <a href="https://takecare-socialapp.herokuapp.com/">Check it now!</a>
                   <p>What tech am I using?</p>
                   <div className="tech-icons d-flex justify-content-around">
                     {this.state.currentProjectIcons.map(iconClass =>

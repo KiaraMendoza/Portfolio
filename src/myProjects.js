@@ -1,5 +1,14 @@
 const myProjects = [
     {
+        name: "This is Med",
+        description: "A Full-Stack Web Application, I've help on the Front-End part",
+        info: "A Full-Stack Web Application, I've help on the Front-End part, doing most of the web layout from a designer's design, the styles and some of the effects",
+        techUsed: ['fab fa-js', 'fab fa-html5', 'fab fa-sass', 'fab fa-bootstrap', 'fab fa-laravel'],
+        projectImg: "/img/projects/this-is-med.png",
+        externalUrl: "http://thisismed.com/",
+        slug: "this-is-med",
+    },
+    {
         name: "Exercise Tracker",
         description: "An very basic exercise tracker app made using the 'MERN' stack.",
         info: "An very basic exercise tracker app made using the 'MERN' (MongoDB, Express, ReactJS and NodeJS) stack. Just for learning and fun :).",
