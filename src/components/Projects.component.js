@@ -64,7 +64,7 @@ export default class Projects extends React.Component {
           } else {
             //Mobile animations
             if (scroll >= (latestsProject.offset().top)) {
-              if ($(this).index() % 2 == 0) {
+              if ($(this).index() % 2 === 0) {
                 $(this).removeClass('invisible').addClass("animate__animated animate__fadeInRight");
               } else {
                 $(this).removeClass('invisible').addClass("animate__animated animate__fadeInLeft");
@@ -93,7 +93,7 @@ export default class Projects extends React.Component {
       if (this.state.projects.indexOf(currentProject) < this.state.maxProjectsToShow) {
         return <ProjectsCards key={currentProject.slug} project={currentProject} projectPosition={this.state.projects.indexOf(currentProject)} />
       }
-      
+      return null;
     });
   }
 

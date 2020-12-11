@@ -1,6 +1,6 @@
 import React from "react";
 
-let texts = ['A junior web developer', 'A tech lover', 'An Animal lover'];
+let texts = ['A junior web developer', 'A tech lover', 'An Animal lover', 'A React Lover'];
 let i = 0, x = 0;
 
 export default class Home extends React.Component {
@@ -56,7 +56,7 @@ export default class Home extends React.Component {
         <div className="polygon d-flex justify-content-center flex-column text-center h-100">
           <div>
             <h1 className="home-header">Hello! I'm Kiara</h1>
-            <h4 id="writing-text" className="d-inline-block"></h4>
+            <h4 id="writing-text" className="d-inline-block"> </h4>
             <span className="writing-span ml-1 animated flash infinite">|</span>
           </div>
         </div>

@@ -8,7 +8,7 @@ import $ from "jquery";
 const Popup = props => (
     <div className='project-popup'>
         <div className='popup_inner d-flex flex-column justify-content-between'>
-            {props.projectGif ? <img src={props.projectGif} /> : <h4 className="h-100 d-flex justify-content-center flex-column">There is no gif of usage's example</h4>}
+            {props.projectGif ? <img alt="No gif" src={props.projectGif} /> : <h4 className="h-100 d-flex justify-content-center flex-column">There is no gif of usage's example</h4>}
             <button className="btn btn-primary border-none py-2" onClick={props.closePopup}>Close popup</button>
         </div>
     </div>
@@ -93,7 +93,7 @@ export default class Project extends React.Component {
                                     />
                                     : null
                                 }
-                                <a className="btn btn-secondary font-weight-bold mt-4" href={this.props.currentProject['externalUrl']} target="_blank">Check the project!</a>
+                                <a className="btn btn-secondary font-weight-bold mt-4" href={this.props.currentProject['externalUrl']} rel="noopener noreferrer" target="_blank">Check the project!</a>
                                 </div>
                             <div className="project-info col-12 col-lg-6 pl-lg-5 pb-5 pb-lg-0">
                                 <h2 className="project-title pt-5 pt-lg-0 pb-3">{this.props.currentProject['name']}</h2>
