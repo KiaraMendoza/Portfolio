@@ -31,10 +31,13 @@ export default class About extends React.Component {
               I don't have too much to say just that when I first saw programming I was like 'Wow! I want to do this!' 
               and started learning somethings about 'Java', then I saw 'Khan Academy' courses..., then 'FreeCodeCamp' ones..., 
               and now its like every tutorial I see about web development that can help me keep improving my projects.
-          </p>
+            </p>
             <p>
-              At the moment I'm looking for junior position to continue learning and improving.
-          </p>
+              I'm always open to new positions to continue improving!
+            </p>
+            <p>
+              Check my github to see my most recent projects! (And the projects I've made for the Full-stack Bootcamp)
+            </p>
             <div className="row mt-5 mx-0 contact-icons-row">
               <div className="col-auto pl-0"><a href="https://www.linkedin.com/in/kiara-ymg/?locale=en_US"><i onMouseEnter={this.addAnimateClass} className="fab fa-linkedin"></i></a></div>
               <div className="col-auto"><a href="mailto: kiaraymg@gmail.com"><i onMouseEnter={this.addAnimateClass}  className="fas fa-envelope"></i></a></div>

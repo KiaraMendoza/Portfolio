@@ -7,9 +7,9 @@ import "../node_modules/animate.css/animate.min.css";
 import HomePage from "./Homepage";
 import NotFound from "./components/NotFound.component";
 import Project from "./components/Project.component";
-import { BrowserRouter as Router, Route, Switch, Redirect, useParams, useRouteMatch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect, useParams } from "react-router-dom";
 import myProjects from "./myProjects";
-import Projects from "./components/Projects.component";
+// import Projects from "./components/Projects.component";
 //import * as serviceWorker from './serviceWorker';
 
 function App() {

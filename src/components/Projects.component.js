@@ -1,5 +1,5 @@
 import React from "react";
-import About from "./About.component";
+// import About from "./About.component";
 import myProjects from "../myProjects";
 import $ from "jquery";
 //import "../../node_modules/animate.css/animate.min.css";
@@ -20,7 +20,7 @@ const ProjectsCards = props =>
           <p>Tech used:</p>
           <div className="tech-icons d-flex justify-content-center">
             {props.project.techUsed.map(tech => {
-              return <i className={`${tech} px-1`}></i>
+              return <i key={`${props.project.slug}-${tech}`} className={`${tech} px-1`}></i>
             })}
           </div>
           <a href={`/projects/${props.project.slug}`} className="btn btn-secondary">See more</a>
@@ -37,7 +37,7 @@ export default class Projects extends React.Component {
 
     this.state = {
       projects: [...myProjects],
-      currentProjectIcons: ['fab fa-react', 'fas fa-database', 'fab fa-node', 'fab fa-js', 'fab fa-sass', 'fab fa-bootstrap' ],
+      currentProjectIcons: ['fab fa-react', 'fab fa-js', 'fab fa-sass', 'fab fa-bootstrap'],
       maxProjectsToShow: 6,
     };
 
@@ -91,7 +91,7 @@ export default class Projects extends React.Component {
   ProjectsList(){
     return this.state.projects.map(currentProject => {
       if (this.state.projects.indexOf(currentProject) < this.state.maxProjectsToShow) {
-        return <ProjectsCards project={currentProject} projectPosition={this.state.projects.indexOf(currentProject)} />
+        return <ProjectsCards key={currentProject.slug} project={currentProject} projectPosition={this.state.projects.indexOf(currentProject)} />
       }
       
     });
@@ -99,7 +99,6 @@ export default class Projects extends React.Component {
 
   ProjectsShowMore(){
     this.setState({ maxProjectsToShow: this.state.maxProjectsToShow + 6});
-    console.log(this.state.maxProjectsToShow, this.state.projects.length);
     if ((this.state.maxProjectsToShow + 6) >= this.state.projects.length) {
       $('.show-more-projects').addClass('d-none');
     }
@@ -114,22 +113,21 @@ export default class Projects extends React.Component {
             <div className="row mx-0">
               <div className="current-project-img-container col-12 col-md-6 invisible">
                 <div className="current-project-img">
-                  <img src="/img/wolfdog.jpg" alt="My current project" />
+                  <img src="/img/projects/alva-live-articles.png" alt="My current project" />
                 </div>
               </div>
               <div className="current-project-info-container col-12 col-md-6 invisible">
                 <div className="current-project-info">
-                  <h4 className="pt-4 pt-md-0">TakeCare!</h4>
+                  <h4 className="pt-4 pt-md-0">Alva Live</h4>
                   <p>
                     <code>Still in progress!!</code><br/>
-                    TakeCare is a web social application where you can express your emotions about your animal-family-members as you could do on a <i>'normal'</i> social media but more focused on animals.<br/>
-                    Let's talk about your loved pets! Do you have any question about any strange behavior on your best friend? Maybe someone in the community can help you, filter using your pet race and ask! <br/>
+                    This is an application that I'm currently working with on my current work at Proun, on this application I'm mainly using React, React-redux, React-Table, -other react libraries-, 
+                    JavaScript, a little bit of Jquery and Bootstrap, Axios, and a looot of love.
                   </p>
-                  <a href="https://takecare-socialapp.herokuapp.com/">Check it now!</a>
                   <p>What tech am I using?</p>
                   <div className="tech-icons d-flex justify-content-around">
                     {this.state.currentProjectIcons.map(iconClass =>
-                      <i onMouseEnter={this.addAnimateClass} className={iconClass} />
+                      <i key={iconClass} onMouseEnter={this.addAnimateClass} className={iconClass} />
                     )}
                   </div>
                 </div>

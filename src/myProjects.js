@@ -1,7 +1,25 @@
 const myProjects = [
     {
+        name: "TakeCare!",
+        description: "TakeCare is a web social application where you can express your emotions about your animal-family-members",
+        info: "TakeCare is a web social application where you can express your emotions about your animal-family-members as you could do on a normal social media but more focused on animals. Lets talk about your loved pets! Do you have any question about any strange behavior on your best friend? Maybe someone in the community can help you, filter using your pet race and ask!",
+        techUsed: ['fab fa-react', 'fas fa-database', 'fab fa-node', 'fab fa-js', 'fab fa-sass', 'fab fa-bootstrap'],
+        projectImg: "/img/wolfdog.jpg",
+        externalUrl: "https://takecare-socialapp.herokuapp.com/",
+        slug: "take-care",
+    },
+    {
+        name: "Clicasa",
+        description: "The test I did to enter Proun, a simple singlepage website.",
+        info: "The test I did to enter Proun, a simple singlepage website with some effects.",
+        techUsed: ['fab fa-js', 'fab fa-html5', 'fab fa-sass', 'fab fa-bootstrap'],
+        projectImg: "/img/projects/clicasa.png",
+        externalUrl: "https://clicacasa.netlify.app/",
+        slug: "clicasa",
+    },
+    {
         name: "This is Med",
-        description: "A Full-Stack Web Application, I've help on the Front-End part",
+        description: "A Full-Stack Web Application, I've help on the Front-End part.",
         info: "A Full-Stack Web Application, I've help on the Front-End part, doing most of the web layout from a designer's design, the styles and some of the effects",
         techUsed: ['fab fa-js', 'fab fa-html5', 'fab fa-sass', 'fab fa-bootstrap', 'fab fa-laravel'],
         projectImg: "/img/projects/this-is-med.png",

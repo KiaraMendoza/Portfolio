@@ -45,7 +45,7 @@ export default class Footer extends React.Component {
             </div>
             <div className="form-group form-check d-flex justify-content-center flex-column">
               <input name="like" id="like" type="checkbox" value={like} onChange={this.handleChange} className="form-check-input mt-0" />
-              <label for="like" className="form-check-label pl-2">Did you like it? </label>
+              <label htmlFor="like" className="form-check-label pl-2">Did you like it? </label>
             </div>
             <button type="submit" className="btn btn-primary"> Let's meet! </button>
           </form>

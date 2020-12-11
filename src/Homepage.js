@@ -4,7 +4,7 @@ import Footer from "./components/Footer.component";
 import Home from "./components/Home.component";
 import About from "./components/About.component";
 import Projects from "./components/Projects.component";
-import NotFound from "./components/NotFound.component";
+// import NotFound from "./components/NotFound.component";
 
 function HomePage() {
   return (
