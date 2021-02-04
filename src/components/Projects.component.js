@@ -107,34 +107,6 @@ export default class Projects extends React.Component {
   render() {
     return (
       <main id="projects" className="projects py-5">
-        <div className="current-project py-5">
-          <h2 className="home-titles text-center pb-4">Current Project</h2>
-          <div className="container pb-5">
-            <div className="row mx-0">
-              <div className="current-project-img-container col-12 col-md-6 invisible">
-                <div className="current-project-img">
-                  <img src="/img/projects/alva-live-articles.png" alt="My current project" />
-                </div>
-              </div>
-              <div className="current-project-info-container col-12 col-md-6 invisible">
-                <div className="current-project-info">
-                  <h4 className="pt-4 pt-md-0">Alva Live</h4>
-                  <p>
-                    <code>Still in progress!!</code><br/>
-                    This is an application that I'm currently working with on my current work at Proun, on this application I'm mainly using React, React-redux, React-Table, -other react libraries-, 
-                    JavaScript, a little bit of Jquery and Bootstrap, Axios, and a looot of love.
-                  </p>
-                  <p>What tech am I using?</p>
-                  <div className="tech-icons d-flex justify-content-around">
-                    {this.state.currentProjectIcons.map(iconClass =>
-                      <i key={iconClass} onMouseEnter={this.addAnimateClass} className={iconClass} />
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="latest-projects">
           <h2 className="text-center latest-projects-title home-titles">Latest projects</h2>
           <div className="cards-row row row-cols-1 row-cols-md-2 row-cols-lg-3 container mx-auto">{this.ProjectsList()}</div>
