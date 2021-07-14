@@ -49,13 +49,13 @@ export default class Projects extends React.Component {
   componentDidMount() {
     $(window).scroll(function (event) {
       let scroll = $(window).scrollTop() + $(window).height() / 2;
-      let currentProject = $('.current-project');
+      // let currentProject = $('.current-project');
       let latestsProject = $('.latest-projects');
       let cards = $('.card-container');
-      if (scroll >= currentProject.offset().top) {
-        $('.current-project-img-container').removeClass('invisible').addClass("animate__animated animate__fadeInLeft");
-        $('.current-project-info-container').removeClass('invisible').addClass("animate__animated animate__fadeInRight");
-      }
+      // if (scroll >= currentProject.offset().top) {
+      //   $('.current-project-img-container').removeClass('invisible').addClass("animate__animated animate__fadeInLeft");
+      //   $('.current-project-info-container').removeClass('invisible').addClass("animate__animated animate__fadeInRight");
+      // }
       cards.each(function() {
         if (scroll >= $(this).offset().top) {
           //Desktop animations
